@@ -1,7 +1,7 @@
 # Создать контейнер с логгированием
 sudo lxc-create -n ubuntu_1 -t ubuntu -o ubuntu_1.log -l DEBUG
 
-# Ограничить контейнер 256 Мб ОЗУ 
+# Ограничить контейнер 256 Мб ОЗУ и добавить автозапуск
 sudo micro /var/lib/lxc/ubuntu_1/config
 sudo cat /var/lib/lxc/ubuntu_1/config | grep memory
 lxc.cgroup2.memory.max = 256M
