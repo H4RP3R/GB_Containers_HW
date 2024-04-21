@@ -1,4 +1,4 @@
-docker run --name postgres_db --rm -e POSTGRES_PASSWORD=pass -h $(hostname) -d postgres
+docker run --name postgres_db --rm -e POSTGRES_PASSWORD=pass -p 5432:5432 -h $(hostname) -d postgres
 docker exec -it postgres_db /bin/bash
 
 su postgres
